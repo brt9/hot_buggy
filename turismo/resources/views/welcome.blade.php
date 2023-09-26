@@ -771,8 +771,7 @@
                                 <p>
                                 We take great interest in how our customers use our resources and offer strong support and unlimited updates. We are constantly thinking about how to make our products intuitive, beautiful and extremely easy to understand, so feel free to tell us your thoughts!                                   
                                 </p>
- 
-                                
+
                 </div>
             </div>
         </div>
