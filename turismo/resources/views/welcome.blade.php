@@ -19,7 +19,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 2; position: relative;">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!"><b>Buggy 3D</b></a>
+            <a class="navbar-brand" href="#!" style="color: #25D366;"><b>Buggy 3D</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -318,9 +318,13 @@
                 <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
             </div>
         </footer>
-      
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="w3-whatsapp font0"><a href="https://api.whatsapp.com/send?phone=5584998102246"
+                class="flex justify-center align-center" target="_blank"><img
+                    src="https://images.tcdn.com.br/706061/themes/55/img/logo_whatsapp.svg?dfd189f6cded1031d1dad5c3ac67474e"
+                    alt="Logo WhatsApp"></a></div>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </div>
