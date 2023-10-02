@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\PasseioTuristico;
+use App\Models\PivotImagenPasseio;
+use App\Models\PivotPasseioTuristico;
+use App\Models\PivotPraiasPasseio;
 
 class PasseioTuristicoController extends Controller
 {
@@ -18,12 +21,16 @@ class PasseioTuristicoController extends Controller
     {
         $id = $request->input('id'); // Obtém o valor do parâmetro 'id' da URL
         $passeio = PasseioTuristico::find($id);
-    
-        if (!$passeio) {
-            abort(404); // Trata o caso em que o passeio não é encontrado
+
+        // Procura na tabela pivot pelo campo 'id_opcional'
+        $pivotpasseio = PivotPasseioTuristico::where('id_opcional', $id)->get();
+        $pivotimagen = PivotImagenPasseio::where('id_imagen', $id)->get();
+        $pivot_praias = PivotPraiasPasseio::where('id_praia', $id)->get();
+
+        if (!$passeio || !$pivotpasseio || !$pivotimagen || !$pivot_praias) {
+            abort(404); // Trata o caso em que o passeio ou o pivotpasseio não é encontrado
         }
-    
-        return view('passeios', compact('passeio'));
+        return view('passeios', compact('passeio', 'pivotpasseio', 'pivotimagen', 'pivot_praias'));
     }
 
     public function create()

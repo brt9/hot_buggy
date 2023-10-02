@@ -69,7 +69,7 @@
                                 var anoAtual = new Date().getFullYear();
                                 anoAtualElement.innerHTML = anoAtual;
                             });
-                        </script>  <a id="anoAtual"></a>Todos os direitos reservados | <i class="icon-heart color-danger"
+                        </script>  <a id="anoAtual"><div></div></a>Todos os direitos reservados </b> | <i class="icon-heart color-danger"
                             aria-hidden="true"></i> By <a href="https://www.linkedin.com/in/pedrofelipebrt9/"
                             target="_blank">Pedro Felipe</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
