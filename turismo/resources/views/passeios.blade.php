@@ -26,7 +26,7 @@
             <div class="row gx-4 gx-lg-5 align-items-center">
                 <div class="col-md-6">
                     @foreach ($pivotimagen as $pivotimagens)
-                        <img class="card-img-top mb-5 mb-md-0" src="{{ $pivotimagens->imagen }}"/> 
+                    <img class="card-img-top mb-5 mb-md-0 standard-image-size" src="{{ $pivotimagens->imagen }}"/>
                     @endforeach
                 </div>
                 <div class="col-md-6">

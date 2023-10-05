@@ -3,7 +3,7 @@
     <!-- Header-->
     <div class="content" style="z-index: 1; position: relative;">
         <header class="bg-dark" style="padding-top: 150px; padding-bottom: 100px;">
-            <video autoplay muted loop  preload="auto">>
+            <video autoplay muted loop preload="auto">>
                 <source src="assets/buggy.mp4" type="video/mp4">
                 <!-- Adicione mais formatos de vídeo, se necessário -->
                 Seu navegador não suporta a reprodução de vídeo.
@@ -16,42 +16,64 @@
                         Diversão</h2>
                 </div>
             </div>
-            
+
         </header>
 
+      <!--  <style>
+            .ftco-section {
+                background-color:  #00BFFF	 !important;
+            }
+
+            body {
+                background-color:  #00BFFF	 !important;
+                /* Substitua esse código de cor pelo valor específico de "Azul Oceano" que você deseja usar, se necessário. */
+                /* Outros estilos para o corpo da página */
+            }
+        </style> -->
+
         <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <section class="ftco-section bg-light">
+            <div class="container">
+                <div class="row justify-content-center mb-3 pb-3">
+                    <div class="col-md-12 heading-section text-center ftco-animate">
+                        <h2 class="mb-4">Desvendando Terras Novas</h2>
+                        <p>Em cada curva, um mistério; em cada passo, uma descoberta. Junte-se a nós e embarque nessa
+                            jornada.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
                     @foreach ($passeios as $passeio)
-                        <div class="col mb-5">
-                            <div class="card h-100 card-lg">
-                                <!-- Product image-->
-                                <img class="card-img-top card-img-custom" src="{{ $passeio->imagem }}" alt="..." style="max-height: 400px;" />
-                                <!-- Product details-->
-                                <div class="card-body p-4">
+                        <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                            <div class="product d-flex flex-column">
+                                <a href="/passeios?id={{ $passeio->id }}" class="img-prod">
+                                    <img class="img-fluid card-image" src="{{ $passeio->imagem }}"
+                                        alt="{{ $passeio->nome }}">
+                                    <div class="overlay"></div>
+                                </a>
+                                <div class="text py-3 pb-4 px-3">
+                                    <div class="d-flex">
+                                        <div class="cat">
+                                            <span>Passeios:</span>
+                                        </div>
+                                    </div><br>
+                                    <h3 class="text-center"><a href="/passeios?id={{ $passeio->id }}">{{ $passeio->nome }}</a></h3>
+                                    <div class="pricing text-center">
+                                        <span class="text-decoration-line-through" style="color: #999;">R$
+                                            {{ number_format($passeio->preco_anterior, 2) }}</span><br>
+                                        <span class="price" style="font-size: 24px; color: green;">R$ {{ number_format($passeio->preco, 2) }}</span>
+                                    </div><br>
+                                    <style>
+                                        .custom-red-button {
+                                            background-color: #ff0000; /* Cor vermelha */
+                                            border-color: #ff0000; /* Cor da borda vermelha (opcional) */
+                                            color: #fff; /* Cor do texto branco para contrastar */
+                                        }
+                                    </style>
+                                    
                                     <div class="text-center">
-                                        <!-- Product name-->
-                                        <h5 class="fw-bolder">
-                                            <h2>{{ $passeio->nome }}</h2>
-                                        </h5>
-                                        <!-- Product price-->
-                                        R$ {{ number_format($passeio->preco, 2) }}
-                                        <!-- Product description-->
-                                        <p class="card-text">
-                                            {{ substr($passeio->descricao, 0, 100) }}
-                                            <!-- Mostra os primeiros 100 caracteres da descrição -->
-                                            @if (strlen($passeio->descricao) > 100)
-                                                ...
-                                                <!-- Adiciona reticências se a descrição for maior que 100 caracteres -->
-                                            @endif
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- Product actions-->
-                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center">
-                                        <a class="btn btn-outline-dark btn-lg mt-3" href="/passeios?id={{ $passeio->id }}">
+                                        <a class="btn btn-outline-dark btn-lg custom-red-button mt-3" href="/passeios?id={{ $passeio->id }}">
                                             Saiba Mais
                                         </a>
                                     </div>
@@ -62,13 +84,13 @@
                 </div>
             </div>
         </section>
-        
 
 
 
-        @include('includes.instagram') 
-    
-        @include('includes.footer') 
+
+        @include('includes.instagram')
+
+        @include('includes.footer')
 </body>
 
 </html>
