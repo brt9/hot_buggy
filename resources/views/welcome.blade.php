@@ -23,10 +23,7 @@
             z-index: 1;
         }
 
-        /* Estilos para o texto */
-        .header-content h1 {
-            color: #ff2800;
-        }
+     
     </style>
 </head>
 <body>
@@ -42,10 +39,14 @@
 
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white header-content">
-                    <h1 class="display-4 fw-bolder">Hot Buggy Natal</h1>
-                    <h2 class="lead fw-normal mb-0">Destinos Descoberta Diversão</h2>
+                    <h1 class="display-4 fw-bolder">
+                        <span style="color: #ff2800;">Hot </span>
+                        <span style="color: #000;">Buggy </span><br>
+                    </h1>
+                    <h2 class="lead fw-normal mb-0">Explore o Rio Grande do Norte com Aventura e Diversão</h2>
                 </div>
             </div>
+            
         </header>
     </div>
 
