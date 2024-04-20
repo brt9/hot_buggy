@@ -15,7 +15,7 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 2; position: relative;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light " style="z-index: 2; position: relative;">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#!" style="color: #ff2800;"><b>Hot Buggy</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
