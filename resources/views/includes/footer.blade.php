@@ -6,8 +6,8 @@
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Buggy 3D</h2>
-                        <b>Explore o mundo com a Buggy 3D e transforme cada viagem em uma aventura inesquecível.</b>
+                        <h2 class="ftco-heading-2">Hot Buggy</h2>
+                        <b>Explore o mundo com a Hot Buggy e transforme cada viagem em uma aventura inesquecível.</b>
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                             <li><p href="#"><img src="images/facebook_icon.png" alt="Facebook"></p></li>
                             <li><p href="#"><img src="images/instagram_icon.png" alt="Instagram"></p></li>
