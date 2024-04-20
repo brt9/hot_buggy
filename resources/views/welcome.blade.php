@@ -10,7 +10,7 @@
             </video>
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white header-content">
-                    <h1 class="display-4 fw-bolder">Buggy 3D Natal</h1>
+                    <h1 class="display-4 fw-bolder">Hot Buggy Natal</h1>
                     <h2 class="lead fw-normal mb-0">Destinos
                         Descoberta
                         Diversão</h2>
@@ -63,20 +63,13 @@
                                         <span class="text-decoration-line-through" style="color: #999;">R$
                                             {{ number_format($passeio->preco_anterior, 2) }}</span><br>
                                         <span class="price" style="font-size: 24px; color: green;">R$ {{ number_format($passeio->preco, 2) }}</span>
-                                    </div><br>
-                                    <style>
-                                        .custom-red-button {
-                                            background-color: #ff0000; /* Cor vermelha */
-                                            border-color: #ff0000; /* Cor da borda vermelha (opcional) */
-                                            color: #fff; /* Cor do texto branco para contrastar */
-                                        }
-                                    </style>
+                                    </div><br> 
                                     
                                     <div class="text-center">
-                                        <a class="btn btn-outline-dark btn-lg custom-red-button mt-3" href="/passeios?id={{ $passeio->id }}">
+                                        <a class="btn btn-primary btn-lg mt-3" href="/passeios?id={{ $passeio->id }}">
                                             Saiba Mais
                                         </a>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>
