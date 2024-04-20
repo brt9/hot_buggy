@@ -10,11 +10,9 @@
             </video>
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white header-content">
-                    <h1 class="display-4 fw-bolder">Hot Buggy Natal</h1>
-                    <h2 class="lead fw-normal mb-0">Destinos
-                        Descoberta
-                        Diversão</h2>
-                </div>
+                    <h1 class="display-4 fw-bolder" style="color: #ff2800">Hot Buggy Natal</h1>
+                    <h2 class="lead fw-normal mb-0" style="color: #ff2800">Destinos               Descoberta                  Diversão</h2>
+            </div>
             </div>
 
         </header>
