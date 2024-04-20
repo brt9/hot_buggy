@@ -2,7 +2,7 @@
     @include('includes.navbar')
     <!-- Header-->
     <div class="content" style="z-index: 1; position: relative;">
-        <header class="bg-dark" style="padding-top: 150px; padding-bottom: 100px;">
+        <header class="bg-dark" style="padding-top: 150px; padding-bottom: 300px;">
             <video autoplay muted loop preload="auto">>
                 <source src="assets/buggy.mp4" type="video/mp4">
                 <!-- Adicione mais formatos de vídeo, se necessário -->
@@ -19,17 +19,6 @@
 
         </header>
 
-      <!--  <style>
-            .ftco-section {
-                background-color:  #00BFFF	 !important;
-            }
-
-            body {
-                background-color:  #00BFFF	 !important;
-                /* Substitua esse código de cor pelo valor específico de "Azul Oceano" que você deseja usar, se necessário. */
-                /* Outros estilos para o corpo da página */
-            }
-        </style> -->
 
         <!-- Section-->
         <section class="ftco-section bg-light">
