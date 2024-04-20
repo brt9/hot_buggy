@@ -8,7 +8,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid px-0">
+    <div class="container-fluid">
         <div class="row no-gutters">
             <div class="col-md-4 col-lg-2 ftco-animate">
                 <div href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center"
