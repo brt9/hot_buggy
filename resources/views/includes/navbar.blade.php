@@ -102,6 +102,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link active" href="/galeria"><b>Galeria</b></a></li>
                     <li class="nav-item"><a class="nav-link active" href="/contato"><b>Contato</b></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/login"><b>Contato</b></a></li>
                 </ul>
             </div>
         </div>
