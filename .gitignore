@@ -1,2 +1,5 @@
+# Ignore .env file
 .env
-.gitignore
+
+# Ignore vendor directory
+/vendor
