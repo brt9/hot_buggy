@@ -22,46 +22,101 @@
             position: relative;
             z-index: 1;
         }
+        .image-container {
+    max-width: 100%;
+    position: center; /* Para posicionamento relativo */
+}
 
-     
+.image-container-lg {
+    display: none; /* Esconde a imagem por padrão */
+}
+
+.image-container img {
+    width: 900px; /* Largura padrão */
+    height: 325px; /* Altura padrão */
+    max-width: 100%;
+
+}
+
+
+
+@media (max-width: 768px) {
+    .image-container {
+        padding-top: 25px; /* Novo valor de padding-top */
+        padding-bottom: 25px; /* Novo valor de padding-bottom */
+        
+    }
+
+    .image-container-lg {
+        display: none; /* Oculta a imagem em telas pequenas */
+    }
+
+    #main-title {
+        top: 100px; /* Ajusta o posicionamento do h1 em telas menores */
+        width: auto; /* Largura automática para ocupar a largura disponível */
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .image-container-lg {
+        display: block; /* Mostra a imagem em telas maiores */
+    }
+
+    #main-title {
+        display: none; /* Oculta o h1 em telas maiores */
+    }
+}
+
+
     </style>
-</head>
-<body>
-    <div class="content" style="z-index: 1; position: relative;">
-        <header class="bg-dark" style="padding-top: 150px; padding-bottom: 350px; position: relative;">
-            <video autoplay muted loop preload="auto">
-                <source src="assets/buggy.mp4" type="video/mp4">
-                <!-- Adicione mais formatos de vídeo, se necessário -->
-                Seu navegador não suporta a reprodução de vídeo.
-            </video>
-            <!-- Overlay para degradê transparente -->
-            <div class="bg-overlay"></div>
+    </head>
 
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white header-content">
-                    <h1 class="display-4 fw-bolder">
-                        <span style="color: #ff2800;">Hot </span>
-                        <span style="color: #000;">Buggy </span><br>
-                    </h1>
-                    <h2 class="lead fw-normal mb-0">Explore o Rio Grande do Norte com Aventura e Diversão</h2>
+    <body>
+        <div class="content" style="z-index: 1; position: relative;">
+            <header class="bg-dark" style="padding-top: 150px; padding-bottom: 360px; position: relative;">
+                <video autoplay muted loop preload="auto">
+                    <source src="assets/buggy.mp4" type="video/mp4">
+                    <!-- Adicione mais formatos de vídeo, se necessário -->
+                    Seu navegador não suporta a reprodução de vídeo.
+                </video>
+                <!-- Overlay para degradê transparente -->
+                <div class="bg-overlay"></div>
+
+                <div class="container px-4 px-lg-5 my-5">
+                    <div class="text-center text-white header-content">
+                        <div class="image-container">
+                            <div class="image-container-lg">
+                                <img src="images/logo.png" href="#page-top" alt="" srcset="" style="width: 900px; height: 325px;">
+                            </div>
+                            
+                            <h1 class="display-4 fw-bolder" id="main-title">
+                                <span style="color: #ff2800; font-size: 60px;">Hot </span>
+                                <span style="color: #000;font-size: 60px;" >Buggy </span><br>
+                            </h1>
+                        </div>
+                        <h1 class="lead fw-normal mb-0" style="font-size: 35px;">Sinta o calor do Nordeste em cada
+                            passeio</h1>
+                    </div>
                 </div>
-            </div>
-            
-        </header>
-    </div>
 
-    <script>
-        // Espera que o documento esteja completamente carregado
-        document.addEventListener("DOMContentLoaded", function() {
-            // Seleciona o elemento do gradiente
-            const overlay = document.querySelector('.bg-overlay');
-            
-            // Após 9 segundos, adiciona a classe 'hidden' para esconder o gradiente
-            setTimeout(function() {
-                overlay.classList.add('hidden');
-            }, 9000); // 9 segundos
-        });
-    </script>
+            </header>
+        </div>
+
+        <script>
+            // Espera que o documento esteja completamente carregado
+            document.addEventListener("DOMContentLoaded", function() {
+                // Seleciona o elemento do gradiente
+                const overlay = document.querySelector('.bg-overlay');
+
+                // Após 9 segundos, adiciona a classe 'hidden' para esconder o gradiente
+                setTimeout(function() {
+                    overlay.classList.add('hidden');
+                }, 9000); // 9 segundos
+            });
+        </script>
 
 
         <!-- Section-->
@@ -148,6 +203,6 @@
         @include('includes.instagram')
 
         @include('includes.footer')
-</body>
+    </body>
 
-</html>
+    </html>

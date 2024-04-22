@@ -24,10 +24,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!" style="color: #000;">
-                <span style="color: #ff2800;"><b>Hot</b></span> Buggy
-            </a>
-        <!--    <img src="assets/image.png" href="#page-top" alt="" srcset="" style="width: 80px; height: 50px;"> -->
+           <img src="images/logo.png" href="#page-top" alt="" srcset="" style="width: 180px; height: 75px;"> 
             <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
