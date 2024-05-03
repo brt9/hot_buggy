@@ -1,6 +1,23 @@
-.gitignore
-# Ignore .env file
-.env
-
-# Ignore vendor directory
+/.phpunit.cache
+/node_modules
+/public/build
+/public/css
+/public/font-awesome
+/public/fonts
+/public/img
+/public/js
+/public/hot
+/public/scss
+/public/storage
+/storage/*.key
 /vendor
+/.env
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
