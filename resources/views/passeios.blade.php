@@ -19,14 +19,12 @@
     <!-- Navigation-->
     @include('includes.navbar')
     <!-- Product section-->
-
-    <!-- Product section-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
                 <div class="col-md-6">
                     @foreach ($pivotimagen as $pivotimagens)
-                    <img class="card-img-top mb-5 mb-md-0 standard-image-size" src="{{ $pivotimagens->imagen }}"/>
+                        <img class="card-img-top mb-5 mb-md-0 standard-image-size" src="{{ $pivotimagens->imagen }}" alt="Imagem do Passeio"/>
                     @endforeach
                 </div>
                 <div class="col-md-6">
@@ -57,11 +55,32 @@
                         O QUE NÃO ESTÁ INCLUSO: <br>( Serviços Opcionais Prestados por 3º Terceiros)
                     </h5>
                     <p class="lead" style="text-align: justify; color: red;">
-
                         @foreach ($pivotpasseio as $pivotpasseios)
                             {{ $pivotpasseios->opcional }}<br>
                         @endforeach
                     </p>
+
+                    <!-- Formulário de pagamento -->
+                    <form action="https://ws.sandbox.pagseguro.uol.com.br/v2/checkout/payment.html" method="POST">
+                        <!-- Informações de pagamento -->
+                        <input type="hidden" name="email" value="pfelipemedeiros@hotmail.com">
+                        <input type="hidden" name="token" value="BC04018712C543F3B955813504A66D76">
+                    
+                        <!-- Detalhes do produto -->
+                        <input type="hidden" name="item_id_1" value="12345">
+                        <input type="hidden" name="item_description_1" value="Passeio de Buggy em Natal">
+                        <input type="hidden" name="item_amount_1" value="{{ number_format($passeio->preco, 2, '.', '') }}">
+                        <input type="hidden" name="item_quantity_1" value="1">
+                        
+                        <!-- Detalhes adicionais -->
+                        <input type="hidden" name="currency" value="BRL">
+                        
+                        <!-- URL para Redirecionamento após pagamento -->
+                        <input type="hidden" name="redirectUrl" value="https://www.hotbuggy.com.br/retornopagamento">
+                        
+                        <!-- Envia o formulário -->
+                        <button type="submit" class="btn btn-primary">Pagar com PagBank</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -69,6 +88,7 @@
 
     @include('includes.instagram')
     @include('includes.footer')
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
