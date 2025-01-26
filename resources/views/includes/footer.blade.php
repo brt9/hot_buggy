@@ -47,12 +47,22 @@
                         <h2 class="ftco-heading-2">Alguma Duvida?</h2>
                         <div class="block-23 mb-3">
                             <ul>
-                                <li><span class="icon icon-map-marker"></span><span class="text">Rua Prefeito
-                                        Pompeu Jacome 251, Casa 3, Natal - RN Cep 59090-513</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+55
-                                            84 998102246</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span
-                                            class="text">pfelipemedeiros@hotmail.com</span></a></li>
+                                <li>
+                                    <span class="fas fa-map-marker-alt me-2"></span>
+                                    <span class="text">Rua Prefeito Pompeu Jacome 251, Casa 3, Natal - RN Cep 59090-513</span>
+                                </li>
+                                <li>
+                                    <a href="tel:+5584998102246">
+                                        <span class="fas fa-phone me-2"></span>
+                                        <span class="text">+55 84 99810-2246</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:pfelipemedeiros@hotmail.com">
+                                        <span class="fas fa-envelope me-2"></span>
+                                        <span class="text">pfelipemedeiros@hotmail.com</span>
+                                    </a>
+                                </li>                                
                             </ul>
                         </div>
                     </div>
@@ -61,7 +71,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
 
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <p>
                         Copyright &copy;
                         <script>
                             document.addEventListener("DOMContentLoaded", function() {
@@ -69,11 +79,11 @@
                                 var anoAtual = new Date().getFullYear();
                                 anoAtualElement.innerHTML = anoAtual;
                             });
-                        </script>  <a id="anoAtual"><div></div></a>Todos os direitos reservados </b> | <i class="icon-heart color-danger"
-                            aria-hidden="true"></i> By <a href="https://www.linkedin.com/in/pedrofelipebrt9/"
-                            target="_blank">Pedro Felipe</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
+                        </script>
+                        <a id="anoAtual"></a> Todos os direitos reservados </b> | 
+                        <i class="fas fa-heart text-danger" aria-hidden="true"></i> 
+                        By <a href="https://www.linkedin.com/in/pedrofelipebrt9/" target="_blank">Pedro Felipe</a>
+                    </p>                    
                 </div>
             </div>
         </div>

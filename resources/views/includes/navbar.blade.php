@@ -19,6 +19,8 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/icomoon.css" rel="stylesheet" />
     <link href="css/flaticon.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <!-- Navigation-->
 

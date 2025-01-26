@@ -131,35 +131,88 @@
                 </div>
             </div>
             <style>
+                /* Estilo geral */
                 .custom-card {
                     height: 100%;
+                    border: none;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s, box-shadow 0.3s;
                 }
-
+            
+                .custom-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                }
+            
+                /* Imagem */
                 .custom-card .card-img-top {
                     object-fit: cover;
-                    height: 350px;
-                    /* Aumentando a altura da imagem */
+                    height: 300px;
+                    border-bottom: 3px solid #007bff;
                 }
-
+            
+                /* Corpo do Card */
                 .custom-card .card-body {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    padding: 20px;
                 }
-
+            
+                /* Título */
+                .custom-card .card-title {
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #333;
+                }
+            
+                /* Preços */
                 .custom-card .price {
-                    margin-top: auto;
-                    /* Faz com que o preço fique na parte inferior */
+                    margin: 10px 0;
                 }
-
-                .center-vertical {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    height: 100%;
+            
+                .custom-card .price .text-decoration-line-through {
+                    text-decoration: none;
+                    color: #999;
+                    font-size: 18px;
+                }
+            
+                .custom-card .price .text-success {
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #28a745;
+                }
+            
+                /* Botão */
+                .custom-card .btn-primary {
+                    background: linear-gradient(135deg, #007bff, #0056b3);
+                    border: none;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border-radius: 25px;
+                    padding: 10px 20px;
+                    transition: background 0.3s;
+                }
+            
+                .custom-card .btn-primary:hover {
+                    background: linear-gradient(135deg, #0056b3, #003f8a);
+                }
+            
+                /* Layout responsivo */
+                @media (max-width: 768px) {
+                    .custom-card .card-img-top {
+                        height: 200px;
+                    }
+            
+                    .custom-card .price .text-success {
+                        font-size: 24px;
+                    }
                 }
             </style>
-
+            
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     @foreach ($passeios as $passeio)
@@ -167,24 +220,20 @@
                             <div class="card mb-4 custom-card">
                                 <a href="/passeios?id={{ $passeio->id }}" class="img-prod">
                                     <img class="card-img-top" src="{{ $passeio->imagem }}" alt="{{ $passeio->nome }}">
-                                    <div class="overlay"></div>
                                 </a>
                                 <div class="card-body">
-                                    <h5 class="card-title text-center" style="font-size: 20px;"><a
+                                    <h5 class="card-title text-center"><a
                                             href="/passeios?id={{ $passeio->id }}">{{ $passeio->nome }}</a></h5>
-                                    <div class="card-text center-vertical">
+                                    <div class="card-text">
                                         <div class="price text-center">
-                                            <span class="text-decoration-line-through" style="font-size: 20px;"> R$
-                                                {{ number_format($passeio->preco_anterior, 2) }}</span>
+                                            <span class="text-decoration-line-through">R$ {{ number_format($passeio->preco_anterior, 2) }}</span>
                                         </div>
                                         <div class="price text-center">
-                                            <span class="text-success" style="font-size: 30px;"> R$
-                                                {{ number_format($passeio->preco, 2) }}</span>
+                                            <span class="text-success">R$ {{ number_format($passeio->preco, 2) }}</span>
                                         </div>
                                     </div>
                                     <div class="text-center mt-4">
-                                        <a class="btn btn-primary" href="/passeios?id={{ $passeio->id }}">Saiba
-                                            Mais</a>
+                                        <a class="btn btn-primary" href="/passeios?id={{ $passeio->id }}">Saiba Mais</a>
                                     </div>
                                 </div>
                             </div>
@@ -192,6 +241,7 @@
                     @endforeach
                 </div>
             </div>
+            
 
 
 
